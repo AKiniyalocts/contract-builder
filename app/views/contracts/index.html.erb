@@ -1,0 +1,13 @@
+<h1>Contract List</h1>
+ 
+<table>
+ 
+  <% @contracts.each do |contract| %>
+    <tr>
+      <td><%= contract.compName %></td>
+      <td><%= contract.accountNum %></td>
+      <td><%= contract.compPhone %></td>
+      <td><%= contract.compFax %></td>
+    </tr>
+  <% end %>
+</table>
