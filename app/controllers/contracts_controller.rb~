@@ -1,14 +1,11 @@
 class ContractsController < ApplicationController
     def new
-        @contract = Contract.new
+    
     end
     def create
         @contract = Contract.new(contract_params)
-        if @contract.save
-            redirect_to @contract
-        else
-            render 'new'
-        end
+        @contract.save
+        redirect_to @contract
     end
     
     def show
@@ -16,12 +13,12 @@ class ContractsController < ApplicationController
     end
     
     def index
-        @contract = Contract.all
+        @contracts = Contract.all
     end
     
     private
         def contract_params
-            params.require(:contracts).permit(:compName, :accountNum, :compPhone, :compFax)
+            params.require(:contract).permit(:compName, :accountNum, :compPhone, :compFax)
         end
         
 end
