@@ -14,7 +14,6 @@ ContractBuilder::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   resources :contracts
-  #DELETE /contracts/id(.:format)      contracts#destroy
   #posts GET ('/contracts'.:format) contracts#index
   #GET    /contracts(:format)          contracts#index
   # Example resource route with options:

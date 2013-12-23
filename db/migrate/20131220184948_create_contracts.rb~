@@ -5,9 +5,6 @@ class CreateContracts < ActiveRecord::Migration
       t.string :accountNum
       t.string :compPhone
       t.string :compFax
-      t.string :compContact
-      t.string :compPhone
-      t.string :compEmail
 
       t.timestamps
     end

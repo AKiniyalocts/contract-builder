@@ -3,7 +3,8 @@ class ContractsController < ApplicationController
         @contract = Contract.new
     end
     def create
-        @contract = Contract.new(contract_params)
+        @contract = Contract.new(params)
+        #@post = Post.new(params[:post].permit(:title, :text))
         if @contract.save
             redirect_to @contract
         else
@@ -19,9 +20,27 @@ class ContractsController < ApplicationController
         @contract = Contract.all
     end
     
+    def edit
+        @contract = Contract.find(params[:id])
+    end
+    
+    def update
+        @contract = Contract.find(params[:id])
+        if @contract.update(params[:contract].permit(:compName, :accountNum, :compPhone, :compFax, :compContact, :conPhone, :conEmail))
+            redirect_to @contract
+        else
+            render 'edit'
+        end
+    end
+    def destroy
+        @contract = Contract.find(params[:id])
+        @contract.destroy
+        
+        redirect_to contracts_path
+    end
     private
         def contract_params
-            params.require(:contracts).permit(:compName, :accountNum, :compPhone, :compFax)
+            params.require(:contract).permit(:compName, :accountNum, :compPhone, :compFax, :compContact, :conPhone, :conEmail)
         end
         
 end

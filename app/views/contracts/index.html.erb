@@ -9,6 +9,10 @@
     <tr>
       <td><%= contract.compName %></td>
       <td><%= contract.accountNum %></td>
+      <td><%= link_to 'Show', contract %></td>
+    <td><%= link_to 'Edit', edit_contract_path(contract) %></td>
+    <td><%= link_to 'Destroy', contract_path(contract),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
