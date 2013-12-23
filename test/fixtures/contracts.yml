@@ -17,6 +17,7 @@ one:
   billZip: MyString
   billCounty: MyString
   billTax: MyString
+  billShipChk: false
 
 two:
   compName: MyString
@@ -35,3 +36,4 @@ two:
   billZip: MyString
   billCounty: MyString
   billTax: MyString
+  billShipChk: false

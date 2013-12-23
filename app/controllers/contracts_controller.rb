@@ -26,7 +26,7 @@ class ContractsController < ApplicationController
     
     def update
         @contract = Contract.find(params[:id])
-        if @contract.update(params[:contract].permit(:compName, :accountNum, :compPhone, :compFax, :compContact, :conPhone, :conEmail))
+        if @contract.update(params[:contract].permit(:compName, :accountNum, :compPhone, :compFax, :shipStr, :shipCity, :shipSt, :shipZip, :shipCounty, :shipTax,:billShipChk, :billStr, :billCity, :billSt, :billZip, :billCounty, :billTax))
             redirect_to @contract
         else
             render 'edit'
@@ -40,7 +40,7 @@ class ContractsController < ApplicationController
     end
     private
         def contract_params
-            params.require(:contract).permit(:compName, :accountNum, :compPhone, :compFax, :shipStr, :shipCity, :shipSt, :shipZip, :shipCounty, :shipTax, :billStr, :billCity, :billSt, :billZip, :billCounty, :billTax)
+            params.require(:contract).permit(:compName, :accountNum, :compPhone, :compFax, :shipStr, :shipCity, :shipSt, :shipZip, :shipCounty, :shipTax,:billShipChk, :billStr, :billCity, :billSt, :billZip, :billCounty, :billTax)
         end
         
 end

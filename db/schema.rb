@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131223145937) do
+ActiveRecord::Schema.define(version: 20131223184932) do
 
   create_table "contracts", force: true do |t|
     t.string   "compName"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20131223145937) do
     t.string   "billZip"
     t.string   "billCounty"
     t.string   "billTax"
+    t.boolean  "billShipChk"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

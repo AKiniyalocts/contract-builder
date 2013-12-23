@@ -17,6 +17,7 @@ class CreateContracts < ActiveRecord::Migration
       t.string :billZip
       t.string :billCounty
       t.string :billTax
+      t.boolean :billShipChk
 
       t.timestamps
     end
