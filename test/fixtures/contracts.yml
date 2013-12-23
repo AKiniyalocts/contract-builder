@@ -5,9 +5,33 @@ one:
   accountNum: MyString
   compPhone: MyString
   compFax: MyString
+  shipStr: MyString
+  shipCity: MyString
+  shipSt: MyString
+  shipZip: MyString
+  shipCounty: MyString
+  shipTax: MyString
+  billStr: MyString
+  billCity: MyString
+  billSt: MyString
+  billZip: MyString
+  billCounty: MyString
+  billTax: MyString
 
 two:
   compName: MyString
   accountNum: MyString
   compPhone: MyString
   compFax: MyString
+  shipStr: MyString
+  shipCity: MyString
+  shipSt: MyString
+  shipZip: MyString
+  shipCounty: MyString
+  shipTax: MyString
+  billStr: MyString
+  billCity: MyString
+  billSt: MyString
+  billZip: MyString
+  billCounty: MyString
+  billTax: MyString

@@ -15,67 +15,128 @@
     <%= radio_button_tag(:conType, "Checkmate") %>
   </p>
     <h2>Company</h2>
-    <p>
-    <%= f.label(:compNameLbl, "Company Name") %>
-    <%= f.text_field :compName %>
-    <%= f.label(:accountNumLbl, "Account Number")%>
-    <%= f.text_field :accountNum %><br>
-    <%= f.label(:compPhoneLbl, "Company Phone")%>
-    <%= f.text_field :compPhone %>
-    <%= f.label(:compFaxLbl, "Company Fax") %>
-    <%= f.text_field :compFax %><br>
-  </p>
-  
-  <h2>Contact</h2>
-  <p>
-    <%= f.label(:compContactLbl, "Computer/Hardware Contact") %>
-    <%= f.text_field :compContact %><br>
-    <%= f.label(:conPhLbl, "Contact Phone Label")%>
-    <%= f.text_field :conPhone %>
-    <%= f.label(:conEmailLbl, "Contact Email") %>
-    <%= f.text_field :conEmail %>
-  </p>
-  <h2>Shipping Address</h2>
-  <p>
-    <%= f.label(:shipStLbl, "Street")%>
-    <%= f.text_field :shipSt %><br>
-    <%= f.label(:shipCityLbl, "City")%>
-    <%= f.text_field :shipCity %>
-    <%= f.label(:shipStLbl, "State")%>
-    <%= f.text_field(:shipSt)%>
-    <%= f.label(:shipZipLbl, "Zip")%>
-    <%= f.text_field(:shipZip) %><br>
-    <%= f.label(:shipCountyLbl, "County")%>
-    <%= f.text_field(:shipCounty)%>
-    <%= f.label(:shipTaxLbl, "Sales Tax Rate")%>
-    <%= f.text_field(:shipTax)%>
-  </p>
+    <table>
+    <tr>
+    <td>Company Name: <%= f.text_field :compName %></td>
+    <td>Account Number: <%= f.text_field :accountNum %></td>
+    <tr>
+    </tr>
+    <td>Company Phone: <%= f.text_field :compPhone %></td>
+    <td>Company Fax: <%= f.text_field :compFax %><br></td>
+    </tr>
+  </table>
+   <h2>Shipping Address</h2>
+  <table>
+    <tr>
+    <td>Street: <%= f.text_field :shipStr %></td>
+    <td>City: <%= f.text_field :shipCity %></td>
+    <td>State: <%= f.text_field(:shipSt)%></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+    <td>Zip Code: <%= f.text_field(:shipZip) %></td>
+    <td>County: <%= f.text_field(:shipCounty)%></td>
+    <td>Sales Tax Rate: <%= f.text_field(:shipTax)%></td>
+    </tr>
+  </table>
   <h2>Billing Address</h2>
   <p>
     <%= f.label(:billShipChkLbl, "Same as Shipping Address")%>
     <%= check_box_tag(:billShipChk)%>
   </p>
-  <p>
-    <%= f.label(:billStLbl, "Street")%>
-    <%= f.text_field :billSt %><br>
-    <%= f.label(:billCityLbl, "City")%>
-    <%= f.text_field :billCity %>
-    <%= f.label(:billStLbl, "State")%>
-    <%= f.text_field(:billSt)%>
-    <%= f.label(:billZipLbl, "Zip")%>
-    <%= f.text_field(:billZip) %><br>
-    <%= f.label(:billCountyLbl, "County")%>
-    <%= f.text_field(:billCounty)%>
-    <%= f.label(:billTaxLbl, "Sales Tax Rate")%>
-    <%= f.text_field(:billTax)%>
-  </p>
-  <script>
+  <table>
+    <tr>
+    <td>Street: <%= f.text_field :billStr %></td>
+    <td>City: <%= f.text_field :billCity %></td>
+    <td>State: <%= f.text_field(:billSt)%></td>
+    </tr>
     
-    jQuery("input[type=checkbox]").click(function() {
-        alert("You Clicked It!")
-    });
-  </script>
-  <p>
-    <%= f.submit %>
-  </p>
+    <tr>
+    <td>Zip Code: <%= f.text_field(:billZip) %></td>
+    <td>County: <%= f.text_field(:billCounty)%></td>
+    <td>Sales Tax Rate: <%= f.text_field(:billTax)%></td>
+    </tr>
+  </table>
+  
+  <h2>How did you become aware of our services?</h2>
+    <table cellspacing="0">
+        <tr>
+            <td>Magazine: <%= check_box_tag(:magazineChk)%> </td>
+            <td>Trade Show: <%= check_box_tag(:tradeShowChk)%></td>
+            <td>Friend: <%= check_box_tag(:friendChk)%></td>
+            <td>Direct Mail: <%= check_box_tag(:friendChk)%></td>
+            <td>Internet: <%= check_box_tag(:internetChk)%></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>Sales Person: <%= text_field_tag(:salesPersTxt)%></td>
+            <td>Referral: <%= text_field_tag(:referralTxt)%></td>
+            <td>Other: <%= text_field_tag(:otherTxt)%></td>
+        </tr>
+    </table>
+  <h2>Memberships</h2><p>(Select all desired to be displayed on Car-Part.com)</p>
+  <table>
+    <tr>
+        <td>ARA: <%= check_box_tag(:araChk)%> </td>
+        <td>CARS: <%= check_box_tag(:carsChk)%></td>
+        <td>Gold Seal: <%= check_box_tag(:goldSealChk)%></td>
+        <td>URG: <%= check_box_tag(:urgChk) %></td>
+        <td>URG 6000: <%= check_box_tag(:urg6000Chk)%></td>
+        <td>URG 7000: <%= check_box_tag(:urg7000Chk)%></td>
+        <td>URG 8000: <%= check_box_tag(:urg8000Chk)%></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+        <td>State Organization: <%= text_field_tag(:stateOrg)%></td>
+        <td>Local Organization: <%= text_field_tag(:localOrg)%></td>
+    </tr>
+  </table>
+  
+  <table>
+    <tr>
+        <td>None Displayed: <%= check_box_tag(:noMemChk)%></td>
+    </tr>
+  </table>
+  <h2>Current Inventory Management System</h2>
+  <table>
+    <tr>
+        <td>Internet Checkmate: <%= check_box_tag(:iCMChk)%></td>
+        <td>Yard #<%= text_field_tag(:iCMYardNum)%></td>
+        <td>Telnet Checkmate: <%= check_box_tag(:telCMChk)%></td>
+        <td>Yard #: <%= text_field_tag(:telYardNum)%></td>
+  </table>
+  <table>
+    <tr>
+        <td>Fast Parts: <%= check_box_tag(:fastPartChk)%></td>
+        <td>Yard #<%= text_field_tag(:fPYardNum)%></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+        <td>Pinnacle Classic: <%= check_box_tag(:pinClassicChk)%></td>
+        <td>Pinnacle Pro: <%= check_box_tag(:pinProChk)%></td>
+        <td>AIM: <%= check_box_tag(:aimChk)%></td>
+        <td>iSoft: <%= check_box_tag(:iSoftChk)%></td>
+        <td>Hollander: <%= check_box_tag(:hollChk)%></td>
+  </table>
+  <table>
+        <td>Powerlink: <%= check_box_tag(:powerLinkChk)%></td>
+        <td>Powerlink II: <%= check_box_tag(:pLIIChk)%></td>
+        <td>Powerlink II w/ Hollander PowerStation: <%= check_box_tag(:pLIIH)%></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+        <td>Other: <%= text_field_tag(:otherIMS)%></td>
+    </tr>
+    <tr>
+        <td>None: <%= check_box_tag(:noIMSChk)%></td>
+    </tr>
+  </table>
+    <br>
+      <%= f.submit %>
 <% end %>
+<br>

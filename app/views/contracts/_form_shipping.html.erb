@@ -1,0 +1,49 @@
+<%= form_for @contract do |f| %>
+      <% if @contract.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@contract.errors.count, "error") %> prohibited
+      this post from being saved:</h2>
+    <ul>
+    <% @contract.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+    <% end %>
+  </div>
+  
+  <h2>Shipping Address</h2>
+  <p>
+    <%= f.label(:shipStLbl, "Street")%>
+    <%= f.text_field :shipStr %><br>
+    <%= f.label(:shipCityLbl, "City")%>
+    <%= f.text_field :shipCity %>
+    <%= f.label(:shipStLbl, "State")%>
+    <%= f.text_field(:shipSt)%>
+    <%= f.label(:shipZipLbl, "Zip")%>
+    <%= f.text_field(:shipZip) %><br>
+    <%= f.label(:shipCountyLbl, "County")%>
+    <%= f.text_field(:shipCounty)%>
+    <%= f.label(:shipTaxLbl, "Sales Tax Rate")%>
+    <%= f.text_field(:shipTax)%>
+  </p>
+  <h2>Billing Address</h2>
+  <p>
+    <%= f.label(:billShipChkLbl, "Same as Shipping Address")%>
+    <%= check_box_tag(:billShipChk)%>
+  </p>
+  <p>
+    <%= f.label(:billStLbl, "Street")%>
+    <%= f.text_field :billStr %><br>
+    <%= f.label(:billCityLbl, "City")%>
+    <%= f.text_field :billCity %>
+    <%= f.label(:billStLbl, "State")%>
+    <%= f.text_field(:billSt)%>
+    <%= f.label(:billZipLbl, "Zip")%>
+    <%= f.text_field(:billZip) %><br>
+    <%= f.label(:billCountyLbl, "County")%>
+    <%= f.text_field(:billCounty)%>
+    <%= f.label(:billTaxLbl, "Sales Tax Rate")%>
+    <%= f.text_field(:billTax)%>
+  </p>
+  
+<% end %>

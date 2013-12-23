@@ -11,16 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131220184948) do
+ActiveRecord::Schema.define(version: 20131223145937) do
 
   create_table "contracts", force: true do |t|
     t.string   "compName"
     t.string   "accountNum"
     t.string   "compPhone"
     t.string   "compFax"
+    t.string   "shipStr"
+    t.string   "shipCity"
+    t.string   "shipSt"
+    t.string   "shipZip"
+    t.string   "shipCounty"
+    t.string   "shipTax"
+    t.string   "billStr"
+    t.string   "billCity"
+    t.string   "billSt"
+    t.string   "billZip"
+    t.string   "billCounty"
+    t.string   "billTax"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
 
 end

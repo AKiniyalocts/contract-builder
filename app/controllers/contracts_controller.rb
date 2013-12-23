@@ -1,10 +1,10 @@
 class ContractsController < ApplicationController
+    http_basic_authenticate_with name: "anthony", password: "1234"
     def new
         @contract = Contract.new
     end
     def create
-        @contract = Contract.new(params)
-        #@post = Post.new(params[:post].permit(:title, :text))
+        @contract = Contract.new(contract_params)
         if @contract.save
             redirect_to @contract
         else
@@ -40,7 +40,7 @@ class ContractsController < ApplicationController
     end
     private
         def contract_params
-            params.require(:contract).permit(:compName, :accountNum, :compPhone, :compFax, :compContact, :conPhone, :conEmail)
+            params.require(:contract).permit(:compName, :accountNum, :compPhone, :compFax, :shipStr, :shipCity, :shipSt, :shipZip, :shipCounty, :shipTax, :billStr, :billCity, :billSt, :billZip, :billCounty, :billTax)
         end
         
 end
