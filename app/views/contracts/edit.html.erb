@@ -1,6 +1,16 @@
-<h1>Contract for <%=@contract.compName%></h1>
+<%= stylesheet_link_tag "new_style_sheet.css" %>
+<h2>Contract for <%=@contract.compName%></h2>
 
 <%= render 'form' %>
 
- 
-<%= link_to 'Back to Home', root_path %>
+<div class = "footer">
+<br>
+<br>
+<br>
+    <div class="bottom_nav" ><%= link_to 'Back to Home', root_path %>
+    <%= link_to 'Contract List', contracts_path %>
+    </div>
+    
+<br>
+</div>
+

@@ -1,0 +1,4 @@
+<%= form_for @contract do |f| %>
+    <p>Account Number: <%= text_field_tag(:searchQuery)%></p>
+<%= f.submit %>
+<% end %>

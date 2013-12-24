@@ -1,0 +1,30 @@
+.footer{
+    background: #575757;
+    margin-left: -10px;
+    margin-right: -8px;
+    margin-bottom: -10px;
+}
+.bottom_nav{
+    text-align:center;
+    color: white;
+}
+a:link { 
+    color: #33B4E5;
+    
+}
+a:visited { 
+    color: #8BD5F2;
+}
+a:hover{
+    color: #FFBB33;
+}
+a:active{
+    color: #65CBF2
+}
+p{
+    margin: 5px;
+    margin-left: 10px;
+}
+table{
+    margin: 5px;
+}

@@ -1,0 +1,17 @@
+
+.top_nav{
+    background: #575757;
+    margin-left: -10px;
+    margin-right: -8px;
+    margin-top: -10px;
+    
+}
+h1{
+    color: white;
+    margin:10px;
+}
+p{
+    margin-left: 10px;
+    margin-bottom: 20px;
+    
+}

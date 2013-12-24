@@ -1,3 +1,19 @@
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<%= stylesheet_link_tag "new_style_sheet.css" %>
 <h2>New Contract</h2>
+
 <%= render 'form' %>
-<%= link_to 'Back to Home', root_path %>
+<div class = "footer">
+<br>
+<br>
+<br>
+    <div class="bottom_nav" ><%= link_to 'Back to Home', root_path %>
+    <%= link_to 'Contract List', contracts_path %>
+    </div>
+    
+<br>
+</div>
+</body>
