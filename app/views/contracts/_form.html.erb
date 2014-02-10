@@ -48,22 +48,33 @@
    <h2>Shipping Address</h2>
   <table>
     <tr>
-    <td>Street: <%= f.text_field :shipStr %></td>
-    <td>City: <%= f.text_field :shipCity %></td>
-    <td>State: <%= f.text_field(:shipSt)%></td>
+        <td>Street: </td>
+        <td><%= f.text_field :shipStr %></td>
+        <td>County: </td>
+        <td><%= f.text_field(:shipCounty)%></td>
     </tr>
-  </table>
-  <table>
     <tr>
-    <td>Zip Code: <%= f.text_field(:shipZip) %></td>
-    <td>County: <%= f.text_field(:shipCounty)%></td>
-    <td>Sales Tax Rate: <%= f.text_field(:shipTax)%></td>
+        <td>City: </td>
+        <td><%= f.text_field :shipCity %></td>
+        <td>Sales Tax Rate: </td>
+        <td><%= f.text_field(:shipTax)%></td>
     </tr>
+    <tr>
+        <td>State: </td>
+        <td><%= f.text_field(:shipSt)%></td>
+    </tr>
+    <tr>
+        <td>Zip Code: </td>
+        <td><%= f.text_field(:shipZip) %></td>
+    </tr>
+    
+    
+    
   </table>
   <h2>Billing Address</h2>
   <p>
     <%= f.label(:billShipChkLbl, "Same as Shipping Address")%>
-    <%= check_box_tag(:billShipChk)%>
+    <%= f.check_box(:billShipChk)%>
   </p>
   <table>
     <tr>

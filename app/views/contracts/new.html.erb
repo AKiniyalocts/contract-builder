@@ -5,13 +5,17 @@
 <%= stylesheet_link_tag "new_style_sheet.css" %>
     <header>
     <a href="http://imgur.com/qYhF7gF"><img src="http://i.imgur.com/Zt6y8Mr.jpg"/></a>
-    <h1>New Contract</h1>
+    
     <div class="top_nav">
       <%= link_to 'Home', root_path %>
       <%= link_to 'Contract List', contracts_path %>
+      <%= link_to 'FAQ', "#"%>
+      <%= link_to 'About', "#"%>
+      <%= link_to 'Help', "#"%>
       </div>
+      <br></br>
   </header>
-
+<h1>New Contract</h1>
 <%= render 'form' %>
 <div class = "footer">
 <br>

@@ -1,12 +1,30 @@
-<%= stylesheet_link_tag "welcome_style_sheet.css" %>
+<head>
+    
+</head>
+<body>
+<%= stylesheet_link_tag "new_style_sheet.css" %>
+    <header>
+        <a href="http://imgur.com/qYhF7gF"><img src="http://i.imgur.com/Zt6y8Mr.jpg"/></a>
+    
+    <div class="top_nav">
+      <%= link_to 'Home', root_path %>
+      <%= link_to 'New Contract', new_contract_path%>
+      <%= link_to 'Contract List', contracts_path %>
+      <%= link_to 'FAQ', "#"%>
+      <%= link_to 'About', "#"%>
+      <%= link_to 'Help', "#"%>
+      </div>
+      <br></br>
+  </header>
 
-
-<div class= "top_nav">
+<div class = "footer">
 <br>
-<h1>Contract Builder for Car-Part.com</h1>
-<p>
-<%= link_to "Contracts", controller: "contracts"%>
-<%= link_to 'New Contract', new_contract_path %>
-</p>
+<br>
+<br>
+    <div class="bottom_nav" ><%= link_to 'Home', root_path %>
+    <%= link_to 'Contract List', contracts_path %>
+    </div>
+    
+<br>
 </div>
-<img src="http://i.imgur.com/Zt6y8Mr.jpg"/></a>
+</body>
