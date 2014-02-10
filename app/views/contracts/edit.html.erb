@@ -1,6 +1,13 @@
 <%= stylesheet_link_tag "new_style_sheet.css" %>
-<h2>Contract for <%=@contract.compName%></h2>
 
+<header>
+    <a href="http://imgur.com/qYhF7gF"><img src="http://i.imgur.com/Zt6y8Mr.jpg"/></a>
+    <h1>Contract for <%=@contract.compName%></h1>
+    <div class="top_nav">
+      <%= link_to 'Home', root_path %>
+      <%= link_to 'Contract List', contracts_path %>
+      </div>
+  </header>
 <%= render 'form' %>
 
 <div class = "footer">

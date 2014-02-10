@@ -11,21 +11,16 @@
     </ul>
     <% end %>
   </div>
-  <p>
-    Checkmate
-    <%= radio_button_tag(:conType, "Checkmate") %>
-  </p>
-    <h2>Company</h2>
-    <table>
-    <tr>
-    <td>Company Name: <%= f.text_field :compName %></td>
-    <td>Account Number: <%= f.text_field :accountNum %></td>
-    <tr>
-    </tr>
-    <td>Company Phone: <%= f.text_field :compPhone %></td>
-    <td>Company Fax: <%= f.text_field :compFax %><br></td>
-    </tr>
-  </table>
+
+    <h2>Company<hr></hr></h2>
+    
+    <ul>
+        <li>Company Name: <%= f.text_field :compName %></li>
+        <li>Account Number: <%= f.text_field :accountNum %></li>
+        <li>Company Phone: <%= f.text_field :compPhone %></li>
+        <li>Company Fax: <%= f.text_field :compFax %></li>
+    </ul>
+    
    <h2>Shipping Address</h2>
   <table>
     <tr>
@@ -102,38 +97,23 @@
     </tr>
   </table>
   <h2>Current Inventory Management System</h2>
-  <table>
-    <tr>
-        <td>Internet Checkmate: <%= check_box_tag(:iCMChk)%></td>
-        <td>Yard # <%= text_field_tag(:iCMYardNum)%></td>
-        <td>Telnet Checkmate: <%= check_box_tag(:telCMChk)%></td>
-        <td>Yard # <%= text_field_tag(:telYardNum)%></td>
-  </table>
-  <table>
-    <tr>
-        <td>Fast Parts: <%= check_box_tag(:fastPartChk)%></td>
-        <td>Yard #<%= text_field_tag(:fPYardNum)%></td>
-    </tr>
-  </table>
-  <table>
-    <tr>
-        <td>Pinnacle Classic: <%= check_box_tag(:pinClassicChk)%></td>
-        <td>Pinnacle Pro: <%= check_box_tag(:pinProChk)%></td>
-        <td>AIM: <%= check_box_tag(:aimChk)%></td>
-        <td>iSoft: <%= check_box_tag(:iSoftChk)%></td>
-        <td>Hollander: <%= check_box_tag(:hollChk)%></td>
-    </tr>
-  </table>
-  <table>
-    <tr>
-        <td>Powerlink: <%= check_box_tag(:powerLinkChk)%></td>
-        <td>Powerlink II: <%= check_box_tag(:pLIIChk)%></td>
-    </tr>
-    </table>
-    <table>
-        <td>Powerlink II w/ Hollander PowerStation: <%= check_box_tag(:pLIIH)%></td>
-    </tr>
-  </table>
+  <select name="city_id" id="city_id">
+    <option value="1">Internet Checkmate</option>
+    <option value="2">Telnet Checkmate</option>
+    <option value="3">Fast Parts</option>
+    <option value="4">Pinnacle Classic</option>
+    <option value="5">Pinnacle Pro</option>
+    <option value="6">AIM</option>
+    <option value="7">iSoft</option>
+    <option value="8">Hollander</option>
+    <option value="9">Powerlink</option>
+    <option value="10">Powerlink II</option>
+    <option value="11">Powerlink II w/Hollander PowerStation</option>
+    <option value="12">Other</option>
+    <option value="13">None</option>
+    
+  </select>
+  
   <table>
     <tr>
         <td>Other: <%= text_field_tag(:otherIMS)%></td>
@@ -144,5 +124,11 @@
   </table>
     <br>
       <%= f.submit 'Submit Contract', :class => 'submit_button' %>
+  <script>
+    
+    $("button").on("click", function() {
+      alert("clicked!")
+    });
+  </script>
 <% end %>
 <br>

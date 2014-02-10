@@ -1,16 +1,31 @@
+header{
+    background: #00AFD6;
+    color: #575757;
+    margin-left: -10px;
+    margin-right: -8px;
+    margin-bottom: -10px;
+    margin-top: -10px;
+    size: 400px;
+    
+}
+
 .footer{
     background: #575757;
     margin-left: -10px;
     margin-right: -8px;
     margin-bottom: -10px;
 }
+body{
+    font-family: Arial, serif;
+    font-size: 15px;
+}
 .bottom_nav{
     text-align:center;
-    color: white;
+    
 }
 a:link { 
     color: #33B4E5;
-    
+    margin-right: 20px;
 }
 a:visited { 
     color: #8BD5F2;
@@ -28,3 +43,29 @@ p{
 table{
     margin: 5px;
 }
+
+ul{
+    display: inline;
+}
+li{
+    padding: 0px 0px 0px 10px;
+    
+}
+h1{
+    font-size: 40px;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+}
+h2{
+    padding: 0px 0px 0px 0px;
+    font-size: 30px;
+    color: #575757;
+}
+hr{
+    margin: 1px 1px 1px 1px;
+}
+
+
+
+
+
