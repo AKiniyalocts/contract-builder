@@ -12,38 +12,14 @@
     <% end %>
   </div>
 
-    <h2>About You</h2>
+    <h2>Company<hr></hr></h2>
     
-    <table>
-    <tr>
-        <td>Company Name: </td>
-        <td><%= f.text_field :compName %></td>
-        <td><div class="table_head">Owner or Admin Contact: </div></td>
-        <td><%= text_field_tag(:adminContact)%></td>
-        <td><div class = "table_head">Computer/Hardware Contact: </td>
-        <td><%= text_field_tag(:hard_contact)%></td>
-    </tr>
-    <tr>
-        <td>Account Number: </td>
-        <td><%= f.text_field :accountNum %></td>
-        <td>Contact Phone: </td>
-        <td><%= text_field_tag(:admin_phone)%></td>
-        <td>Contact Phone: </td>
-        <td><%= text_field_tag(:hard_phone)%></td>
-    </tr>
-    <tr>
-        <td>Company Phone: </td>
-        <td><%= f.text_field :compPhone %></td>
-        <td>Contact Email: </td>
-        <td><%= text_field_tag(:admin_email)%></td>
-        <td>Contact Email: </td>
-        <td><%= text_field_tag(:hard_email)%></td>
-    </tr>
-    <tr>
-        <td>Company Fax: </td>
-        <td><%= f.text_field :compFax %></td>
-    </tr>
-    </table>
+    <ul>
+        <li>Company Name: <%= f.text_field :compName %></li>
+        <li>Account Number: <%= f.text_field :accountNum %></li>
+        <li>Company Phone: <%= f.text_field :compPhone %></li>
+        <li>Company Fax: <%= f.text_field :compFax %></li>
+    </ul>
     
    <h2>Shipping Address</h2>
   <table>
