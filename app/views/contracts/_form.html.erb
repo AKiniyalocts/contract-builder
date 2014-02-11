@@ -78,15 +78,24 @@
   </p>
   <table>
     <tr>
-    <td>Street: <%= f.text_field :billStr %></td>
-    <td>City: <%= f.text_field :billCity %></td>
-    <td>State: <%= f.text_field(:billSt)%></td>
+        <td>Street: </td>
+        <td><%= f.text_field :billStr %></td>
+        <td>County: </td>
+        <td><%= f.text_field(:billCounty)%></td>
     </tr>
-    
     <tr>
-    <td>Zip Code: <%= f.text_field(:billZip) %></td>
-    <td>County: <%= f.text_field(:billCounty)%></td>
-    <td>Sales Tax Rate: <%= f.text_field(:billTax)%></td>
+        <td>City: </td>
+        <td><%= f.text_field :billCity %></td>
+        <td>Sales Tax Rate: </td>
+        <td><%= f.text_field(:billTax)%></td>
+    </tr>
+    <tr>
+        <td>State: </td>
+        <td><%= f.text_field(:billSt)%></td>
+    </tr>
+    <tr>
+        <td>Zip Code: </td>
+        <td><%= f.text_field(:billZip) %></td>
     </tr>
   </table>
   
@@ -107,16 +116,28 @@
             <td>Other: <%= text_field_tag(:otherTxt)%></td>
         </tr>
     </table>
-  <h2>Memberships</h2><p>(Select all desired to be displayed on Car-Part.com)</p>
+  <h2>Memberships</h2><p><div class="hint_text">(Select all desired to be displayed on Car-Part.com)</div></p>
   <table>
     <tr>
-        <td>ARA: <%= check_box_tag(:araChk)%> </td>
-        <td>CARS: <%= check_box_tag(:carsChk)%></td>
-        <td>Gold Seal: <%= check_box_tag(:goldSealChk)%></td>
-        <td>URG: <%= check_box_tag(:urgChk) %></td>
-        <td>URG 6000: <%= check_box_tag(:urg6000Chk)%></td>
-        <td>URG 7000: <%= check_box_tag(:urg7000Chk)%></td>
-        <td>URG 8000: <%= check_box_tag(:urg8000Chk)%></td>
+        <td>ARA: </td>
+        <td><%= check_box_tag(:araChk)%> </td>
+        <td>URG: </td>
+        <td><%= check_box_tag(:urgChk) %></td>
+        <td>URG 8000: </td>
+        <td><%= check_box_tag(:urg8000Chk)%></td>
+    </tr>
+    <tr>
+        <td>CARS: </td>
+        <td><%= check_box_tag(:carsChk)%></td>
+        <td>URG 6000: </td>
+        <td><%= check_box_tag(:urg6000Chk)%></td>
+    </tr>
+    <tr>
+        <td>Gold Seal: </td>
+        <td><%= check_box_tag(:goldSealChk)%></td>
+        <td>URG 7000: </td>
+        <td><%= check_box_tag(:urg7000Chk)%></td>
+        
     </tr>
   </table>
   <table>
